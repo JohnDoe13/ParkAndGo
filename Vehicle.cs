@@ -1,4 +1,5 @@
-﻿using System;
+﻿//using ParkAndGo;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -48,7 +49,7 @@ namespace ParkAndGo
     class Car : Airplane
     {
         
-        public Car c = new Car();
+        //public Car c = new Car();
         private string fuel { get; set; }
         
         public void Driver()
@@ -62,36 +63,36 @@ namespace ParkAndGo
             Console.WriteLine();
         }
     }
-    
-       
-}     
-        
+    class Bike : Car
+    {
+        private string fueltype;
+        public void Riding()
+        {
+            Console.WriteLine("Riding my bike");
+        }
+    }
+    class Bus : Bike
+    {
 
-    
+        private int Cylindervolume;
+        public void Commute()
+        {
+            Console.WriteLine("I am commuting to work.");
+        }
+    }
 
-    //class Bike : Car
-    //{
-    //    private string fueltype;
-    //    public void Riding()
-    //    {
-    //        Console.WriteLine("Riding my bike");
-    //    }
-    //}
-    //class Bus : Bike
-    //{
-        
-    //    private int Cylindervolume;
-    //    public void Commute()
-    //    {
-    //        Console.WriteLine("I am commuting to work.");
-    //    }
-    //}
+    class Boat : Bus
+    {
+        public void Sailing()
+        {
+            Console.WriteLine("I am sailing");
+        }
+    }
 
-    //class Boat : Bus
-    //{
-    //    public void Sailing()
-    //    {
-    //        Console.WriteLine("I am sailing");
-    //    }
-    //}
+}
+
+
+
+
+
 

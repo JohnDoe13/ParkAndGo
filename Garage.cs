@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ParkAndGo
 {
-    public class Garage<T> : IEnumerable<Vehicle> /*IEnumerable<T> where T : IVehicle*/
+    public class Garage/*<T> : IEnumerable<Vehicle> IEnumerable<T> where T : IVehicle*/
     {
         
         
@@ -58,6 +58,7 @@ namespace ParkAndGo
         }
 
 
+        /*By David N
         void TaBort()
         {
             var garage = new Garage<IVehicle>("""");
@@ -78,20 +79,20 @@ namespace ParkAndGo
             }
         }
 
-        IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();
+        //IEnumerator IEnumerable.GetEnumerator() => GetEnumerator();*/
     }
 
     //class Dallas : Garage
     //{
     //    public Dallas(string name, string city, int levels, int capacity): base( name,  city, levels, capacity)
     //    {
-            
+
     //    }
     //}
 
     //Create parkingspace and set it to a fix size according to location. See above.
 
-    
+
 
 
 }

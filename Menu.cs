@@ -19,7 +19,7 @@ namespace ParkAndGo
         public void Show_Menu()
         {
             int selection;
-            var gg = new Garage("Park n Go", "any", 5, 1500);
+            var gg = new Garage("Park n Go", "any", 5, 5);
             gg.About();
             
             do
