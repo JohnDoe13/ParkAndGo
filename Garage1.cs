@@ -6,19 +6,25 @@ using System.Text;
 using System.Threading.Tasks;
 namespace ParkAndGo
 {
-    internal class Garage<T>
+    public class Garage<T>
     {
-        private string name;
-        private string city;
-        private int levels;
-        private int capacity;
+        private string Name { get; set; }
+        private string City { get; set; }
+        private int Levels { get; set; }
+        private int Capacity { get; set; }
 
         public Garage(string name, string city, int levels, int capacity)
         {
-            this.name = name;
-            this.city = city;
-            this.levels = levels;
-            this.capacity = capacity;
+            this.Name = name;
+            this.City = city;
+            this.Levels = levels;
+            this.Capacity = capacity;
+        }
+
+        public void GarageInfo()
+        {
+            Console.WriteLine($"Info about your garage.");
+            Console.WriteLine($"Name: {Name}, City {City}, Levels: {Levels} and Capacity: {Capacity}");
         }
     }
 }

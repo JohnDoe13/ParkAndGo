@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace ParkAndGo
 {
@@ -6,6 +7,7 @@ namespace ParkAndGo
     {
         static void Main(string[] args)
         {
+            /*Constant to set parkingspaces. Same for every new Garage*/
             const int space= 5;
             //For test purposes
             // //Console.WriteLine("Hello World!");
@@ -49,6 +51,23 @@ namespace ParkAndGo
             var sm = new Menu();
             sm.Show_Menu();
 
+            /*I want to instantiate class/object to use in a List*/
+            //var VehiclesLists = new Vehicle();
+            //List<var> VehicleLists = new List<var>();
+            //VehicleLists.Add("numb)
+
+            List<Vehicle> vList = new List<Vehicle>();
+            vList.Add(new Vehicle("CIA123", "Red", 4, "Car"));
+            vList.Add(new Vehicle("kGB342", "Yellow", 4, "Boat"));
+            vList.Add(new Vehicle("TBI321", "Black", 4, "AirPlane"));
+            vList.Add(new Vehicle("MRI623", "Red", 4, "Car"));
+            vList.Add(new Vehicle("FBI123", "White", 4, "Bike"));
+            Console.WriteLine("Showing All");
+            //Showing carinfo
+            foreach (var v in vList)
+            {
+                Console.WriteLine($"Your car {v}");
+            }
 
 
 

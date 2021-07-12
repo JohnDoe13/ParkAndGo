@@ -21,13 +21,13 @@ namespace ParkAndGo
             int selection;
             var gg = new Garage("Park n Go", "any", 5, 5);
             gg.About();
-            
+
             do
-	            {
+            {
                 //bool proceed = true;
                 Console.Clear();
                 Console.WriteLine("***Welcome to ParkAndGo.***\n\nPlease follow the instructions on the screen.\nTo exit, enter 0 <zero> at anytime.");
-                
+
                 Console.WriteLine();
 
                 Console.WriteLine("Note: always press Enter to return to menu");
@@ -44,24 +44,37 @@ namespace ParkAndGo
                 Console.WriteLine("------------------------------");
                 Console.Write("Make your selection:");
                 selection = int.Parse(Console.ReadLine());
-                
+
                 switch (selection)
                 {
-                 case 1:
-                    ShowAll();
+                    case 1:
+                        ShowAll();
                         Console.ReadLine();
-                 break;
+                        break;
 
-                case 2:
-                    ShowingType();
+                    case 2:
+                        ShowingType();
                         Console.ReadLine();
                         break;
-                case 3:
-                    AddRemove();
+                    case 3:
+                        AddRemove();
                         Console.ReadLine();
                         break;
-                case 0:
-                    Console.WriteLine("Are you sure you want to exit? Press 'Y' or 'y'");
+                    case 4:
+                        ShowingCapacity();
+                        Console.ReadLine();
+                        break;
+
+                    case 5:
+                        SearchVehicles();
+                        Console.ReadLine();
+                        break;
+                    case 6:
+                        Confirmation();
+                        Console.ReadLine();
+                        break;
+                    case 0:
+                        Console.WriteLine("Are you sure you want to exit? Press 'Y' or 'y'");
                         if (Console.ReadKey().Key != ConsoleKey.Y)
                         {
                             Show_Menu();
@@ -69,21 +82,21 @@ namespace ParkAndGo
                         else
                         {
                             Environment.Exit(1);
-                            
+
                         }
-                    Console.ReadKey();
-                    break;
-                default:
-                    Console.WriteLine("Wrong input. Please, try again.");
-                    break;
+                        Console.ReadKey();
+                        break;
+                    default:
+                        Console.WriteLine("Wrong input. Please, try again.");
+                        break;
 
                 }
 
 
-            }   while (selection!=0);
+            } while (selection != 0);
         }
-        
-        
+
+
         public void ShowAll()
         {
             Console.WriteLine("Showing All");
@@ -98,5 +111,32 @@ namespace ParkAndGo
         {
             Console.WriteLine("Here we can Add and Remove vehicles");
         }
+        public void ShowingCapacity()
+        {
+            Console.WriteLine("What's the capacity?");
+        }
+        public void SearchVehicles()
+        {
+            Console.WriteLine("Search for a vehicle.");
+        }
+        public void Confirmation()
+        {
+            Console.WriteLine("Confirm your parking.");
+        }
+        //public void MoreInfo()
+        //{
+        //    List<Vehicle> vList = new List<Vehicle>();
+        //    vList.Add(new Vehicle("CIA123", "Red", 4, "Car"));
+        //    vList.Add(new Vehicle("kGB342", "Red", 4, "Boat"));
+        //    vList.Add(new Vehicle("TBI321", "Red", 4, "AirPlane"));
+        //    vList.Add(new Vehicle("MRI623", "Red", 4, "Car"));
+        //    vList.Add(new Vehicle("FBI123", "Red", 4, "Bike"));
+        //    Console.WriteLine("Showing All");
+        //    //Showing carinfo
+        //    foreach (var v in vList)
+        //    {
+        //        Console.WriteLine($"Your car {v}");
+        //    }
     }
 }
+

@@ -16,7 +16,7 @@ namespace ParkAndGo
         public string City;
         public int Capacity=5;
 
-        private Vehicle[] vehicles;
+        public Vehicle[] vehicles;
         //int[] space = new int[1500];
 
 
@@ -40,7 +40,7 @@ namespace ParkAndGo
             this.Capacity = capacity;
             //instansera vehicles-arrayen
         }
-
+        /*By David N
         void Park(Vehicle vehicle)
         {
             // iterera över fältet vehicles
@@ -58,7 +58,7 @@ namespace ParkAndGo
         }
 
 
-        /*By David N
+        
         void TaBort()
         {
             var garage = new Garage<IVehicle>("""");

@@ -9,39 +9,73 @@ namespace ParkAndGo
 {
     public class Vehicle /*: IVehicle*/
     {
-        private string numberplate { get; set; }
-        private string color { get; set; }
-        private int numofwheels { get; set; }
-        private string type { get; set; }
+        private string Licenseplate { get; set; }
+        private string Color { get; set; }
+        private int Numofwheels { get; set; }
+        private string Vtype { get; set; }
+
+        public Vehicle(string licenseplate, string color, int numofwheels, string type)
+        {
+            this.Licenseplate = licenseplate;
+            this.Color = color;
+            this.Numofwheels = numofwheels;
+            this.Vtype = type;
+        }
+        //List<Vehicle> vList = new List<Vehicle>();
+
+        public Vehicle()
+        {
+
+        }
+
+        
+
+
+        //VehicleList.add(New)
+            
         public void Driving()
         {
             Console.WriteLine("I am out driving.");
         }
 
+        /*--Properties--
+            licenseplate,color,numofwheels,type
+        */
+
+        
         public void Info()
         {
-            Console.WriteLine($"Your car {numberplate}{color}{numofwheels}{type}");
+            //foreach(var inf in Vehicle)
+            //{
+              Console.WriteLine($"Your car {Licenseplate}{Color}{Numofwheels}{Vtype}");
+            //}
+            
+            
+
         }
 
         public void ShowAll()
         {
-            Console.WriteLine("Showing All");
+            Console.WriteLine("Showing something later on.");
+            
         }
     }
    
     
-    class Airplane : Vehicle
+    public class Airplane : Vehicle
 
     {
         private string seats { get; set; }
 
-        
-        public string airline;
+        private string airline { get; set; }
         public void FlyingHigh()
         {
             Console.WriteLine("Iam Flying High.");
         }
+        //public Airplane(string licenseplate, string color, int numofwheels, string type)
+        //{
 
+        //}
        
         
     }
